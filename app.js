@@ -3,7 +3,6 @@ const morgan = require('morgan');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
-require('dotenv').config();
 
 // import routes
 const meshRoutes = require('./routes/mesh');
@@ -21,7 +20,7 @@ app.use(cors());
 // routes middleware
 app.use('/api', meshRoutes);
 
-const port = process.env.PORT || 8000;
+const port = 8000;
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
