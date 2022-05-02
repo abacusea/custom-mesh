@@ -12,7 +12,7 @@ exports.read = (req, res) => {
         var result = { error: stderr };
         return res.json(result);
       }
-      var result = { data: JSON.parse(JSON.stringify(stdout).replace(/\\n/g, ''))};
+      var result = { data: JSON.parse(JSON.stringify(stdout))};
       return res.json(result);
     }
   );
