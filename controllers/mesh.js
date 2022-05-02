@@ -13,7 +13,7 @@ exports.read = (req, res) => {
         return res.json(result);
       }
       var result = { data: JSON.parse(JSON.stringify(stdout))};
-      return res.json(result);
+      return JSON.parse(res.json(result));
     }
   );
 };
