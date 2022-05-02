@@ -12,8 +12,8 @@ exports.read = (req, res) => {
         var result = { error: stderr };
         return res.json(result);
       }
-      var result = { data: stdout};
-      return JSON.parse(res.json(result));
+      var result = { data: JSON.parse(stdout.replace(/\r?\n|\r/g, ''))};
+      return res.json(result);
     }
   );
 };
