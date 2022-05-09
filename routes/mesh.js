@@ -2,9 +2,14 @@ const express = require("express");
 const router = express.Router();
 
 const {
-  read,
+  serverInfo,
 } = require("../controllers/mesh");
 
-router.get("/mesh", read);
+router.get("/mesh/serverInfo", serverInfo);
+router.get("/mesh/userInfo", userInfo);
+router.get("/mesh/listUsers", listUsers);
+// router.get("/mesh/serverInfo", serverInfo);
+// router.get("/mesh/serverInfo", serverInfo);
+// router.get("/mesh/serverInfo", serverInfo);
 
 module.exports = router;
