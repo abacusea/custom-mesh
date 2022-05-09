@@ -3,6 +3,8 @@ const router = express.Router();
 
 const {
   serverInfo,
+  userInfo,
+  listUsers
 } = require("../controllers/mesh");
 
 router.get("/mesh/serverInfo", serverInfo);
