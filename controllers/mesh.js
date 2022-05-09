@@ -12,7 +12,7 @@ exports.serverInfo = (req, res) => {
         var result = { error: stderr };
         return res.json(result);
       }
-      var result = { 'data': stdout.split('\n').replace(/(\r\n|\n|\r)/gm, "")};
+      var result = { 'data': stdout.replace(/(\r\n|\r)/gm, "").split('\n')};
       return res.json(result);
     }
   );
@@ -30,7 +30,7 @@ exports.userInfo = (req, res) => {
         var result = { error: stderr };
         return res.json(result);
       }
-      var result = { 'data': stdout.split('\n').replace(/(\r\n|\n|\r)/gm, "")};
+      var result = { 'data': stdout.replace(/(\r\n|\r)/gm, "").split('\n')};
       return res.json(result);
     }
   );
@@ -48,7 +48,7 @@ exports.listUsers = (req, res) => {
         var result = { error: stderr };
         return res.json(result);
       }
-      var result = { 'data': stdout.split('\n').replace(/(\r\n|\n|\r)/gm, "")};
+      var result = { 'data': stdout.replace(/(\r\n|\r)/gm, "").split('\n')};
       return res.json(result);
     }
   );
